@@ -1,0 +1,8 @@
+<div id="content" class="container">
+  <h1>Invite</h1>
+  <form action="/slack" method="post" class="card-panel yellow lighten-2">
+  Din epost: <input name='email' type='email'>
+  <input type="hidden" name="_csrf" value="{{csrfToken}}">
+  <input type="submit" value="Save"><br>
+</form>
+</div>

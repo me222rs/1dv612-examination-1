@@ -1,0 +1,9 @@
+<div id="content" class="card-panel yellow lighten-2">
+  <h1>Verify</h1>
+  An invitation to the Slack team has been sent. Accept the invite sent to: {{email}} and then click the verify button.
+  <form action="/verify" method="post">
+  <input name='email' type='hidden'>
+  <input type="hidden" name="_csrf" value="{{csrfToken}}">
+  <input type="submit" value="Verify"><br>
+</form>
+</div>

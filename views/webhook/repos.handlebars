@@ -1,0 +1,12 @@
+<div id="content" class="container">
+  <h2>Repos</h2>
+  <form name="repoForm" action="/repos/{{org}}" method="post">
+      {{#each repositories}}
+          <div class="card-panel yellow lighten-2">
+          <input id="check{{name}}" type="checkbox" name="checked" value="{{name}}" {{checked}}><label for="check{{name}}">{{name}}</label>
+        </div>
+      {{/each}}
+      <input type="hidden" name="_csrf" value="{{csrfToken}}">
+    <br><input type="submit" value="Save"><br>
+  </form>
+</div>

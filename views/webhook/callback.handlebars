@@ -1,0 +1,52 @@
+<div id="content" class="container">
+  <br><h2>Organisationer</h2>
+  <div class="col s6">
+  {{#each superArray}}
+    <div class="card-panel yellow lighten-2">
+    <h3><a href="/orgs/{{org}}">{{org}}</a></h3>
+      <form action="/webhook/{{org}}" method="post">
+        <input id="check{{org}}1" type="checkbox" name="issues" value="Issues" {{issue}}><label for="check{{org}}1">Issues</label>
+        <input id="check{{org}}2" type="checkbox" name="push" value="Push" {{push}}><label for="check{{org}}2">Push</label>
+        <input id="check{{org}}3" type="checkbox" name="repository" value="Repository" {{repository}}><label for="check{{org}}3">Repository</label>
+        <input id="check{{org}}4" type="checkbox" name="release" value="Release" {{release}}><label for="check{{org}}4">Release</label>
+        <input type="hidden" name="_csrf" value="{{csrfToken}}"><br>
+        <input type="submit" value="Save organization changes"><br>
+      </form>
+    </div>
+  {{/each}}
+</div>
+
+<div class="card-panel yellow lighten-2">
+  <div id="notificationList">
+    <h2>Notifications</h2>
+    <ul id='messages'></ul>
+  </div>
+</div>
+
+<div id="eventList" class="card-panel yellow lighten-2">
+  <h2>Missed events</h2>
+  {{#each newEvents}}
+      <b>{{username}}</b> {{message}} on {{date}}<br>
+  {{/each}}
+</div>
+<script src='/socket.io/socket.io.js'></script>
+<script type="text/javascript" src="/static/websocketscript.js"></script>
+
+<!--<script>
+var socket = io();
+socket.on('message', function(message) {
+    addNotification(message);
+});
+
+//Adds an issue to the notification list
+function addNotification(message) {
+    console.log("4");
+    var text = document.createTextNode(message);
+    var divTag = document.createElement('div');
+    var messages = document.getElementById('messages');
+    divTag.setAttribute('class', 'notificationBox');
+    divTag.appendChild(text);
+    messages.appendChild(divTag);
+}
+</script> -->
+</div>

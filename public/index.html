@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+    <head>
+        <style type="text/css">
+            .hide {
+                visibility: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Github Webhook</h3>
+
+        <!-- This is automatic served by the socket.io server -->
+        <script src='/socket.io/socket.io.js'></script>
+        <script>
+            var socket = io();
+            socket.on('message', function(data){document.write(data)});
+        </script>
+    </body>
+</html>

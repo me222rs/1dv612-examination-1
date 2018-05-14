@@ -1,0 +1,43 @@
+{
+  "name": "me222rs-examination",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1dv612/me222rs-examination.git"
+  },
+  "author": "Mikael Edberg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1dv612/me222rs-examination/issues"
+  },
+  "homepage": "https://github.com/1dv612/me222rs-examination#readme",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "csurf": "^1.9.0",
+    "dotenv": "^4.0.0",
+    "escape-html": "^1.0.3",
+    "express": "^4.14.1",
+    "express-github-webhook": "^1.0.5",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.1",
+    "github": "^9.0.0",
+    "github-oauth": "^0.2.2",
+    "helmet": "^3.5.0",
+    "mongoose": "^4.8.5",
+    "octonode": "^0.7.10",
+    "passport": "^0.3.2",
+    "path": "^0.12.7",
+    "request": "^2.79.0",
+    "request-promise-native": "^1.0.3",
+    "slack-invite": "^1.1.0",
+    "slack-notify": "^0.1.6",
+    "socket.io": "^1.7.3",
+    "xss": "^0.3.3",
+    "xxs": "0.0.1"
+  }
+}
